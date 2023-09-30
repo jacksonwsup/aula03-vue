@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.unpkg.com/vue@3.3.4/dist/vue.global.js"></script>
+    <script src ="./sandbox.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <h2>{{ msg }}</h2>
+        <p v-html = "msg" ></p>
+        <p>{{ count }}</p>
+        <button v-on:click="count++"> Increment</button>
+        <button v-on:click="count--"> Decrement</button>
+        <p v-if="show">Mostrando este parágrafo</p>
+        <p v-else>Oi Isso</p>
+        <p v-show="show">Mostrando este parágrafo</p>
+        <button @click="show = !show">toggle</button>
+        <div v-for="message in messages">
+            <h3>{{message.title}}</h3>
+            <p>{{message.body}}</p>
+        </div>
+        <img :src="url" :alt="count">
+    </div>
+</body>
+</html> 
