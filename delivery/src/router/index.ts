@@ -3,7 +3,7 @@ import { createRouter,createWebHistory } from "vue-router";
 import HomeView from "../views/home/HomeView.vue";
 import PedidoView from "../views/pedido/PedidoView.vue";
 import NotFoundView from "../views/home/NotFoundView.vue";
-import path from "path";
+
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL), //Esta é a base da navegação
