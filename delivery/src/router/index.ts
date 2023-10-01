@@ -2,7 +2,7 @@ import { createRouter,createWebHistory } from "vue-router";
 
 import HomeView from "../views/home/HomeView.vue";
 import PedidoView from "../views/pedido/PedidoView.vue";
-import NotFoundView from "../views/home/NotFoundView.vue";
+import NotFoundView from "../views/notfound/NotFoundView.vue";
 
 
 const router = createRouter({
