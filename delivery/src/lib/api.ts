@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export default (url: string = "http:localhost:8081") => {
+export default (url: string = "http://localhost:8081") => {
 
-    axios.create({
+    return axios.create({
 
         baseURL: url,
         headers: {
@@ -12,4 +12,4 @@ export default (url: string = "http:localhost:8081") => {
         
     });
 
-}
+} 

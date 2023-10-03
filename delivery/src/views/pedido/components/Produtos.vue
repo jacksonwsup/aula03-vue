@@ -22,9 +22,15 @@
 
     import { Produto } from "@/models/Produto";
 
+    import ProdutoService from "../../../services/ProdutoService"
+
     let produtos = ref<Produto[]>([
         new Produto(1,"Coca-Cola 2L", 10)
     ]);
+
+    produtos.value = await ProdutoService.getProdutos();
+
+    console.log(produtos.value)
 
     const adicionarItem = (produto: Produto) => {
         console.log("Adicionando item: " + produto.id);
