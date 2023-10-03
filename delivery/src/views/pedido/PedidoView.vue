@@ -1,3 +1,15 @@
+<script setup lang="ts">
+    import Produtos from './components/Produtos.vue';
+    import PedidoItens from './components/PedidoItens.vue';
+</script>
+
 <template>
-    <h1>Pedido</h1>
+    <div class="flex w-full h-screen">
+        <div class="w-2/3 bg-slate-200">
+            <Produtos/>
+        </div>
+        <div class="w-1/3 bg-slate-300">
+            <PedidoItens/>
+        </div>
+    </div>
 </template>
