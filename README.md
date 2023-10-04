@@ -1,5 +1,25 @@
 # aula03-vue
 
+Para rodar o back, deve entrar na pasta:
+
+## $ cd backend 
+
+Rodar os seguintes comandos:
+
+
+## $ npm install
+## $ npm audit fix
+## $ npm run start-auth
+
+## Para receber o token:
+
+POST http://localhost:8081/oauth/token
+
+{
+  "email": "jackson@gmail.com",
+  "password":"f732dfdbd0aed62727f958cccca9ec3a5cb13eda"
+}
+
 # delivery
 
 This template should help get you started developing with Vue 3 in Vite.
