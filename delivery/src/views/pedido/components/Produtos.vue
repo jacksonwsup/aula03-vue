@@ -22,22 +22,22 @@
 
     import { Produto } from "@/models/Produto";
 
-    import ProdutoService from "../../../services/ProdutoService"
+    import ProdutoService from "../../../services/ProdutoService";
 
-    let produtos = ref<Produto[]>([
-        new Produto(1,"Coca-Cola 2L", 10)
-    ]);
+    import { usePedidoStore } from "../../../stores/PedidoStore";
+
+    let produtos = ref<Produto[]>([]);
 
     produtos.value = await ProdutoService.getProdutos();
 
-    console.log(produtos.value)
+    const store = usePedidoStore();
 
     const adicionarItem = (produto: Produto) => {
-        console.log("Adicionando item: " + produto.id);
+        store.adicionarItem(produto);
     }
  
     const removerItem =(produto: Produto) => {
-        console.log("Removendo item: " + produto.id);
+        store.removerItem(produto);
     }
     
 </script>
