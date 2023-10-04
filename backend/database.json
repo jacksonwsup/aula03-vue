@@ -31,21 +31,6 @@
       "id": 3,
       "nome": "Pizza A La Carte",
       "preco": "45.00"
-    },
-    {
-      "nome": "teste",
-      "valor": "123",
-      "id": 4
-    },
-    {
-      "nome": "10",
-      "valor": "10",
-      "id": 5
-    },
-    {
-      "nome": "teste",
-      "preco": 10,
-      "id": 6
     }
   ],
   "pedidos": [
