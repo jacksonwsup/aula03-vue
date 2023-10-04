@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="flex flex-grow justify-end p-4">
-        <button class="w-24 h-10 text-20 font-bold text-white bg-blue-400 hover:bg-blue-500 shadow rounded-md">
+        <button @click="store.concluirPedido()" class="w-24 h-10 text-20 font-bold text-white bg-blue-400 hover:bg-blue-500 shadow rounded-md">
             Salvar
         </button>
     </div>
