@@ -4,12 +4,11 @@
       <form @submit.prevent="criarProduto">
         <div class="flex flex-col">
           <label for="nome" class="text-slate-900 text-2xl font-bold">Nome: </label>
-          <input
-            v-model="produto.nome" type="text" id="nome" class="border border-indigo-200" required />
+          <input v-model="produto.nome" type="text" id="nome" class="border border-indigo-200" required />
         </div>
         <div class="flex flex-col">
-          <label for="valor" class="text-slate-900 text-2xl font-bold">Valor: </label>
-          <input v-model="produto.valor" id="valor" class="border border-indigo-200" required />
+          <label for="preco" class="text-slate-900 text-2xl font-bold">preco: </label>
+          <input v-model="produto.preco" type="number" id="preco" class="border border-indigo-200" required />
         </div>
         <div class="flex justify-start">
           <button type="submit" class="h-10  mt-3 font-bold text-white bg-blue-400 hover:bg-blue-500  rounded-md">
@@ -29,7 +28,7 @@
   
   const produto = ref({
     nome: "",
-    valor: "",
+    preco: "",
   });
   
   const cadastroSucesso = ref(false);
@@ -38,7 +37,7 @@
     await produtoStore.createProduto(produto.value);
   
     produto.value.nome = "";
-    produto.value.valor = "";
+    produto.value.preco = "";
   
     cadastroSucesso.value = true;
   
